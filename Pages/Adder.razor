@@ -1,0 +1,23 @@
+@page "/adder"
+
+<h1>Blazor Test</h1>
+
+
+<ul>
+  @foreach(var item in items){
+    <li>@item</li>
+  }
+</ul>
+
+<button @onclick="addItem">Add Item</button>
+
+@code {
+  List<string> items = new List<string>();
+  public void addItem(){
+    items.Add("Item");
+    //Console.ReadLine();
+  }
+}
+
+
+

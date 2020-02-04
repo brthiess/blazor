@@ -1,0 +1,19 @@
+﻿@page "/counter"
+
+<h1>Blazor Test</h1>
+
+<p>This button has been clicked @counter times</p>
+
+
+<button @onclick="incrementCounter">Click</button>
+
+@code {
+  int counter = 0;
+  public void incrementCounter(){
+    counter++;
+    Console.WriteLine(counter);
+  }
+}
+
+
+

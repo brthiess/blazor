@@ -1,0 +1,18 @@
+@page "/name"
+<h1>Test Page</h1>
+
+<p>Hi, my name is: @name</p>
+
+
+<input placeholder="Name" @bind="newName"/>
+
+<button @onclick="changeName">Submit</button>
+
+@code {
+    string name = "Brad";
+    string newName;
+    void changeName() {
+      name = newName;
+      Console.WriteLine(name);
+    }
+}
